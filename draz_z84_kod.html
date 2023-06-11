@@ -1,0 +1,33 @@
+<textarea rows="45" cols="110" readonly="readonly" style=" resize: none;">
+<html>
+<head>
+<title> Zadanie 84</title>
+<script>
+function drazkowski_start()
+{
+start_dra = new Date();
+poczatek_dra=start_dra.getTime()
+}
+function drazkowski_stop()
+{
+stop_dra = new Date();
+koniec_dra=stop_dra.getTime()
+roznica_dra=koniec_dra-poczatek_dra;
+pokaz1.innerHTML=roznica_dra/1000+" s";
+}
+</script>
+</head>
+<body>
+<script>
+dzis_dra = new Date();
+document.write("<br>Aktualny czas : ",dzis_dra.getHours(),":",dzis_dra.getMinutes());
+</script>
+<br>
+<input type="button" name="Button1" value="START stoper" onclick="drazkowski_start()">
+<input type="button" name="Button2" value="STOP stoper" onclick="drazkowski_stop()">
+<br>
+<table border=5>
+<tr id="pokaz1"></tr>
+</table>
+</body>
+</html>
